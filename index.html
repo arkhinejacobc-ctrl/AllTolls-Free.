@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AllTools is a free collection of simple, useful online tools. No account required.">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>AllTools — Free Tools. One Place.</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/tools.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="AllTools home"><span class="brand-mark">A</span> AllTools</a>
+    <nav class="header-actions" aria-label="Main navigation">
+      <a href="#tools">Explore tools</a>
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch color theme">☾</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> SIMPLE. FREE. USEFUL.</div>
+      <h1>Everything you need.<br><span>All in one place.</span></h1>
+      <p class="hero-copy">A growing collection of free online tools that make everyday tasks easier. No account, no fuss.</p>
+      <label class="search-wrap" for="tool-search">
+        <span aria-hidden="true">⌕</span>
+        <input id="tool-search" type="search" placeholder="Search for a tool..." autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+      <div class="hero-note">✦ Free to use &nbsp; · &nbsp; Works in your browser &nbsp; · &nbsp; No sign-up</div>
+    </section>
+
+    <section class="tools-section" id="tools">
+      <div class="section-heading">
+        <div><p class="section-kicker">THE TOOLBOX</p><h2>Explore our tools</h2></div>
+        <span id="tool-count" class="tool-count">5 tools</span>
+      </div>
+      <div class="category-row" aria-label="Filter tools">
+        <button class="category-chip active" data-category="All" type="button">All tools</button>
+        <button class="category-chip" data-category="Text" type="button">Text</button>
+        <button class="category-chip" data-category="Developer" type="button">Developer</button>
+        <button class="category-chip" data-category="Generators" type="button">Generators</button>
+        <button class="category-chip" data-category="Converters" type="button">Converters</button>
+      </div>
+      <div id="tool-grid" class="tool-grid"></div>
+      <p id="empty-state" class="empty-state" hidden>No tools match your search. Try another word.</p>
+    </section>
+
+    <section class="privacy-banner">
+      <div class="privacy-icon">✳</div>
+      <div><h3>Your work stays yours.</h3><p>Our first tools run directly in your browser. Your text and files are not uploaded to an AllTools server.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">A</span> AllTools</a>
+    <p>Free tools for everyday tasks.</p>
+    <p class="copyright">Open source under the MIT License.</p>
+  </footer>
+
+  <dialog id="tool-dialog" class="tool-dialog">
+    <div class="dialog-top"><div><p id="dialog-category" class="section-kicker"></p><h2 id="dialog-title">Tool</h2></div><button id="dialog-close" class="icon-button" type="button" aria-label="Close tool">✕</button></div>
+    <div id="dialog-content" class="dialog-content"></div>
+  </dialog>
+</body>
+</html>
